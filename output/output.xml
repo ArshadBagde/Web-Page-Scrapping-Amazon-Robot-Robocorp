@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.7.5 on win32)" generated="20220316 11:38:12.187" rpa="true" schemaversion="2">
+<suite id="s1" name="Tasks" source="e:\Internshala\1-Xorion Technologies Pvt Ltd., Nagpur\Projects\Web scraper robot\tasks.robot">
+<test id="s1-t1" name="Store Web Page Content">
+<kw name="Open Application" library="RPA.Excel.Application" type="SETUP">
+<doc>Open the Excel application.</doc>
+<status status="PASS" starttime="20220316 11:38:21.277" endtime="20220316 11:38:23.367"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>${URL-1}</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220316 11:38:23.369" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:23.432" level="INFO">Created download root directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:23.434" level="INFO">Created symlink directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:23.434" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:25.091" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220316 11:38:25.091" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220316 11:38:25.092" level="INFO">Opening url 'https://www.amazon.com/Samsung-Electronics-Unlocked-Smartphone-Long-Lasting/dp/B08BX7N9SK/ref=sr_1_3?keywords=samsung+mobile&amp;qid=1647077707&amp;sr=8-3'</msg>
+<status status="PASS" starttime="20220316 11:38:23.368" endtime="20220316 11:38:31.215"/>
+</kw>
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${Text}</var>
+<arg>dp</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220316 11:38:32.145" level="INFO">${Text} = Cell Phones &amp; Accessories
+›
+Cell Phones
+$1,199.99
+$526.79 Shipping &amp; Import Fees Deposit to India Details
+
+$11.39 delivery
+Deliver to India
+In Stock.
+Qty:
+     1
+       2
+       3
+          Qty:1
+Add ...</msg>
+<status status="PASS" starttime="20220316 11:38:31.215" endtime="20220316 11:38:32.145"/>
+</kw>
+<kw name="Create File" library="RPA.FileSystem">
+<arg>e:\\Internshala\\1-Xorion Technologies Pvt Ltd., Nagpur\\Projects\\Web scraper robot${/}output${/}content-1.csv</arg>
+<arg>${text}</arg>
+<arg>overwrite=True</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<status status="PASS" starttime="20220316 11:38:32.145" endtime="20220316 11:38:32.161"/>
+</kw>
+<kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220316 11:38:32.161" endtime="20220316 11:38:34.363"/>
+</kw>
+<status status="PASS" starttime="20220316 11:38:21.274" endtime="20220316 11:38:34.363"/>
+</test>
+<test id="s1-t2" name="Store Web Page Content">
+<kw name="Open Application" library="RPA.Excel.Application" type="SETUP">
+<doc>Open the Excel application.</doc>
+<status status="PASS" starttime="20220316 11:38:34.366" endtime="20220316 11:38:34.383"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>${URL-2}</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220316 11:38:34.384" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:34.387" level="INFO">Created download root directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:34.387" level="INFO">Created symlink directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:34.388" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:35.462" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220316 11:38:35.462" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220316 11:38:35.462" level="INFO">Opening url 'https://www.amazon.com/Simple-Mobile-Samsung-Galaxy-64GB/dp/B09CLMK872/ref=sr_1_1_sspa?keywords=samsung+mobile&amp;qid=1647078148&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFYU1hWMTc3MlI4RVgmZW5jcnlwdGVkSWQ9QTAyNjM1NzczUk5BWlBaQjBCVkdMJmVuY3J5cHRlZEFkSWQ9QTAxNjA0MjQyOTJZMUk1NTdHWlVUJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=='</msg>
+<status status="PASS" starttime="20220316 11:38:34.383" endtime="20220316 11:38:40.330"/>
+</kw>
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${Text}</var>
+<arg>dp</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220316 11:38:40.892" level="INFO">${Text} = Cell Phones &amp; Accessories
+›
+Cell Phones
+$249.99
+$121.30 Shipping &amp; Import Fees Deposit to India Details
+
+Delivery March 29 - April 18
+Deliver to India
+In Stock.
+Qty:
+     1
+       2
+          Qty:1
+Ad...</msg>
+<status status="PASS" starttime="20220316 11:38:40.331" endtime="20220316 11:38:40.892"/>
+</kw>
+<kw name="Create File" library="RPA.FileSystem">
+<arg>e:\\Internshala\\1-Xorion Technologies Pvt Ltd., Nagpur\\Projects\\Web scraper robot${/}output${/}content-2.csv</arg>
+<arg>${text}</arg>
+<arg>overwrite=True</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<status status="PASS" starttime="20220316 11:38:40.892" endtime="20220316 11:38:40.913"/>
+</kw>
+<kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220316 11:38:40.914" endtime="20220316 11:38:43.105"/>
+</kw>
+<status status="PASS" starttime="20220316 11:38:34.365" endtime="20220316 11:38:43.105"/>
+</test>
+<test id="s1-t3" name="Store Web Page Content">
+<kw name="Open Application" library="RPA.Excel.Application" type="SETUP">
+<doc>Open the Excel application.</doc>
+<status status="PASS" starttime="20220316 11:38:43.108" endtime="20220316 11:38:43.119"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>${URL-3}</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220316 11:38:43.120" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:43.125" level="INFO">Created download root directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:43.125" level="INFO">Created symlink directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:43.125" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:44.296" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220316 11:38:44.296" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220316 11:38:44.296" level="INFO">Opening url 'https://www.amazon.com/Samsung-Factory-Unlocked-Smartphone-Pro-Grade/dp/B08FYVMRM5/ref=sr_1_4?keywords=samsung+mobile&amp;qid=1647078148&amp;sr=8-4'</msg>
+<status status="PASS" starttime="20220316 11:38:43.119" endtime="20220316 11:38:50.761"/>
+</kw>
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${Text}</var>
+<arg>dp</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220316 11:38:51.936" level="INFO">${Text} = Cell Phones &amp; Accessories
+›
+Cell Phones
+$651.68
+$292.05 Shipping &amp; Import Fees Deposit to India Details
+
+Delivery March 29 - April 18
+Deliver to India
+In Stock.
+Qty:
+     1
+       2
+       3
+         ...</msg>
+<status status="PASS" starttime="20220316 11:38:50.762" endtime="20220316 11:38:51.937"/>
+</kw>
+<kw name="Create File" library="RPA.FileSystem">
+<arg>e:\\Internshala\\1-Xorion Technologies Pvt Ltd., Nagpur\\Projects\\Web scraper robot${/}output${/}content-3.csv</arg>
+<arg>${text}</arg>
+<arg>overwrite=True</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<status status="PASS" starttime="20220316 11:38:51.937" endtime="20220316 11:38:51.951"/>
+</kw>
+<kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220316 11:38:51.951" endtime="20220316 11:38:54.139"/>
+</kw>
+<status status="PASS" starttime="20220316 11:38:43.107" endtime="20220316 11:38:54.139"/>
+</test>
+<test id="s1-t4" name="Store Web Page Content">
+<kw name="Open Application" library="RPA.Excel.Application" type="SETUP">
+<doc>Open the Excel application.</doc>
+<status status="PASS" starttime="20220316 11:38:54.141" endtime="20220316 11:38:54.158"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>${URL-4}</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220316 11:38:54.161" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:54.164" level="INFO">Created download root directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:54.164" level="INFO">Created symlink directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:38:54.164" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:38:55.264" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220316 11:38:55.264" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220316 11:38:55.264" level="INFO">Opening url 'https://www.amazon.com/Samsung-Galaxy-Unlocked-T-Mobile-International/dp/B09GPQ9VM6/ref=sr_1_5_mod_primary_new?keywords=samsung+mobile&amp;qid=1647078148&amp;sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&amp;sr=8-5'</msg>
+<status status="PASS" starttime="20220316 11:38:54.158" endtime="20220316 11:39:00.257"/>
+</kw>
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${Text}</var>
+<arg>dp</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220316 11:39:01.056" level="INFO">${Text} = Cell Phones &amp; Accessories
+›
+Cell Phones
+$184.99
+This item cannot be shipped to your selected delivery location. Please choose a different delivery location.
+Deliver to India
+See similar items shipping...</msg>
+<status status="PASS" starttime="20220316 11:39:00.257" endtime="20220316 11:39:01.056"/>
+</kw>
+<kw name="Create File" library="RPA.FileSystem">
+<arg>e:\\Internshala\\1-Xorion Technologies Pvt Ltd., Nagpur\\Projects\\Web scraper robot${/}output${/}content-4.csv</arg>
+<arg>${text}</arg>
+<arg>overwrite=True</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<status status="PASS" starttime="20220316 11:39:01.057" endtime="20220316 11:39:01.071"/>
+</kw>
+<kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220316 11:39:01.072" endtime="20220316 11:39:03.295"/>
+</kw>
+<status status="PASS" starttime="20220316 11:38:54.140" endtime="20220316 11:39:03.295"/>
+</test>
+<test id="s1-t5" name="Store Web Page Content">
+<kw name="Open Application" library="RPA.Excel.Application" type="SETUP">
+<doc>Open the Excel application.</doc>
+<status status="PASS" starttime="20220316 11:39:03.300" endtime="20220316 11:39:03.315"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>${URL-5}</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20220316 11:39:03.318" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:39:03.328" level="INFO">Created download root directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:39:03.329" level="INFO">Created symlink directory: C:\Users\abagd\AppData\Local\robocorp\webdrivers</msg>
+<msg timestamp="20220316 11:39:03.330" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20220316 11:39:04.550" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20220316 11:39:04.550" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20220316 11:39:04.551" level="INFO">Opening url 'https://www.amazon.com/Electronics-Unlocked-Smartphone-Multi-Camera-Expandable/dp/B08XX66S6Z/ref=sr_1_6?keywords=samsung+mobile&amp;qid=1647078148&amp;sr=8-6'</msg>
+<status status="PASS" starttime="20220316 11:39:03.315" endtime="20220316 11:39:10.105"/>
+</kw>
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${Text}</var>
+<arg>dp</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220316 11:39:10.986" level="INFO">${Text} = Cell Phones &amp; Accessories
+›
+Cell Phones
+$179.99
+$91.40 Shipping &amp; Import Fees Deposit to India Details
+
+Delivery March 30 - April 18
+Deliver to India
+Only 19 left in stock - order soon.
+Qty:
+     1
+  ...</msg>
+<status status="PASS" starttime="20220316 11:39:10.105" endtime="20220316 11:39:10.986"/>
+</kw>
+<kw name="Create File" library="RPA.FileSystem">
+<arg>e:\\Internshala\\1-Xorion Technologies Pvt Ltd., Nagpur\\Projects\\Web scraper robot${/}output${/}content-5.csv</arg>
+<arg>${text}</arg>
+<arg>overwrite=True</arg>
+<doc>Creates a new text file, and writes content if any is given.</doc>
+<status status="PASS" starttime="20220316 11:39:10.986" endtime="20220316 11:39:10.996"/>
+</kw>
+<kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220316 11:39:10.997" endtime="20220316 11:39:13.138"/>
+</kw>
+<status status="PASS" starttime="20220316 11:39:03.298" endtime="20220316 11:39:13.139"/>
+</test>
+<test id="s1-t6" name="Minimal task">
+<kw name="Open Application" library="RPA.Excel.Application" type="SETUP">
+<doc>Open the Excel application.</doc>
+<status status="PASS" starttime="20220316 11:39:13.143" endtime="20220316 11:39:13.160"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Done.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220316 11:39:13.161" level="INFO">Done.</msg>
+<status status="PASS" starttime="20220316 11:39:13.160" endtime="20220316 11:39:13.161"/>
+</kw>
+<kw name="Quit Application" library="RPA.Excel.Application" type="TEARDOWN">
+<doc>Quit the application.</doc>
+<status status="PASS" starttime="20220316 11:39:13.162" endtime="20220316 11:39:13.533"/>
+</kw>
+<status status="PASS" starttime="20220316 11:39:13.140" endtime="20220316 11:39:13.533"/>
+</test>
+<doc>A web scrapper robot.
+It Opens a website.
+It Stores the web page Content as a file in the output directory.</doc>
+<status status="PASS" starttime="20220316 11:38:12.190" endtime="20220316 11:39:13.538"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220316 11:38:34.364" level="WARN">Multiple test cases with name 'Store Web Page Content' executed in test suite 'Tasks'.</msg>
+<msg timestamp="20220316 11:38:43.107" level="WARN">Multiple test cases with name 'Store Web Page Content' executed in test suite 'Tasks'.</msg>
+<msg timestamp="20220316 11:38:54.140" level="WARN">Multiple test cases with name 'Store Web Page Content' executed in test suite 'Tasks'.</msg>
+<msg timestamp="20220316 11:39:03.298" level="WARN">Multiple test cases with name 'Store Web Page Content' executed in test suite 'Tasks'.</msg>
+</errors>
+</robot>
